@@ -15,7 +15,6 @@ class Post(models.Model):
     status = models.IntegerField(choices=STATUS, default=0)
     excerpt = models.TextField(blank=True)
     updated_on = models.DateTimeField(auto_now=True)
-    field_1 = models.CharField()
 
 # A class Meta is useful when you want to add data that is not a database table
 # field to your model.
@@ -59,8 +58,7 @@ class Comment(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
 
 # add row-level functionality in Comments objects for logic and metadata 
-# handling so as to provide human readable string representation and
-# ordering for users.
+# handling so as to provideuman readable string representation and ordering for users.
     class Meta:
         ordering = ["created_on"]
 

@@ -15,7 +15,8 @@ class Post(models.Model):
     status = models.IntegerField(choices=STATUS, default=0)
     excerpt = models.TextField(blank=True)
     updated_on = models.DateTimeField(auto_now=True)
-
+    field_2 = models.CharField(default='Hello, World!')
+    field_3 = models.CharField(null=True)
 # A class Meta is useful when you want to add data that is not a database table
 # field to your model.
 # The ordering option adds metadata to the model about the default order in 

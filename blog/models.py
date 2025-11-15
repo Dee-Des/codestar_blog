@@ -57,3 +57,12 @@ class Comment(models.Model):
     approved = models.BooleanField(default=False)
     created_on = models.DateTimeField(auto_now_add=True)
 
+# add row-level functionality in Comments objects for logic and metadata 
+# handling so as to provide human readable string representation and
+# ordering for users.
+    class Meta:
+        ordering = ["created_on"]
+
+
+    def __str__(self):
+        return f"Comment {self.body} by {self.author}"

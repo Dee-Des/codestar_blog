@@ -17,7 +17,7 @@ class Post(models.Model):
     updated_on = models.DateTimeField(auto_now=True)
     
 # A class Meta is useful when you want to add data that is not a database table
-# field to your model.
+# field to your model
 # The ordering option adds metadata to the model about the default order in 
 # which the list of posts is displayed.
 # The posts are now listed from oldest to newest creation time. The - prefix on 

@@ -7,7 +7,8 @@ class PostList(generic.ListView):
     # can now leave some posts in Draft while finish them and they will not show
     #on the live blog
     queryset = Post.objects.filter(status=1)
-    template_name = "post_list.html"
+    template_name = "blog/index.html"
+    paginate_by = 6
     # to display all of the objects, or records, from the Post model.by all users
    # queryset = Post.objects.all()
 

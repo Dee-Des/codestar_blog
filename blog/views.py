@@ -30,25 +30,25 @@ class PostList(generic.ListView):
     # the ordering works with filters too
 
 
-    def post_detail(request, slug):
-        """
-        Display an individual :model:`blog.Post`.
+def post_detail(request, slug):
+    """
+    Display an individual :model:`blog.Post`.
 
-        **Context**
+    **Context**
 
-        ``post``
-            An instance of :model:`blog.Post`.
+    ``post``
+        An instance of :model:`blog.Post`.
 
-        **Template:**
+    **Template:**
 
-        :template:`blog/post_detail.html`
-        """
+    :template:`blog/post_detail.html`
+    """
 
-        queryset = Post.objects.filter(status=1)
-        post = get_object_or_404(queryset, slug=slug)
+    queryset = Post.objects.filter(status=1)
+    post = get_object_or_404(queryset, slug=slug)
 
-        return render(
-            request,
-            "blog/post_detail.html",
-            {"post": post},
+    return render(
+    request,
+    "blog/post_detail.html",
+    {"post": post},
      )

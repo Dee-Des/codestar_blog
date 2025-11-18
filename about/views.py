@@ -8,7 +8,7 @@ def about_me(request):
     Renders the About page
     """
     about = About.objects.all().order_by('-updated_on').first()
-    collaorate_form = CollaborateForm()
+    collaborate_form = CollaborateForm()
     return render(
         request,
         "about/about.html",

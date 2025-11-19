@@ -66,8 +66,9 @@ class Comment(models.Model):
     author = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name="commenter")
     body = models.TextField()
-    approved = models.BooleanField(default=False)
     created_on = models.DateTimeField(auto_now_add=True)
+    approved = models.BooleanField(default=False)
+   
 
 # add row-level functionality in Comments objects for logic and metadata 
 # handling so as to provideuman readable string representation and ordering for users.

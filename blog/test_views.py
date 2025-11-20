@@ -25,3 +25,5 @@ class TestBlogViews(TestCase):
         self.assertIn(b"Blog content", response.content)
         self.assertIsInstance(
             response.context['comment_form'], CommentForm)
+        
+        
